@@ -52,6 +52,14 @@
       "description": "LED indication for message sending and network search process.",
       "type": "boolean",
       "readOnly": true
-    }
+    },
+    "instantaneousCurrentTotal": {
+            "properties": {
+                "title": "Instantaneous Current (Total)",
+                "type": "number",
+                "unit": "om2:ampere",
+                "readOnly": true
+            }
+        }
   }
 }
