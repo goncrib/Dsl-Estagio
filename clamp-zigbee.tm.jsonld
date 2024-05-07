@@ -12,7 +12,7 @@
     "model": "1.0.1"
   },
   "tm:optional": [],
-  "attributes": {
+  "properties": {
     "house": {
       "idHouseThing": ""
     },
