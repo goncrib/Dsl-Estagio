@@ -49,11 +49,8 @@
       "description": "LED indication for message sending and network search process.",
       "type": "boolean",
       "readOnly": true
-    }
-  },
-
-    "features": {
-        "instantaneousCurrentTotal": {
+    },
+    "instantaneousCurrentTotal": {
             "properties": {
                 "title": "Instantaneous Current (Total)",
                 "type": "number",
@@ -118,5 +115,5 @@
                 "readOnly": true
             }
         }
-    }
+  }
 }
