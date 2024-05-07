@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "title": "Plug - Zigbee HA",
+  "version": {
+    "model": "1.0.1"
+  },
+  "tm:optional": [],
+  "attributes": {
+    "house": {
+      "idHouseThing": ""
+    },
+    "hub":{
+      "idHubThing": ""
+    },
+    "firmwareUpdate": {
+      "title": "Firmware Update",
+      "description": "Capability for remote firmware updates.",
+      "type": "boolean",
+      "readOnly": false
+    },
+
+    "identificationMode": {
+      "title": "Identification Mode",
+      "description": "Plug identification mode using LED.",
+      "type": "boolean",
+      "readOnly": false
+    },
+    "initialNetworkConnection": {
+      "title": "Initial Network Connection",
+      "description": "Process of initial network connection using plug.",
+      "type": "boolean",
+      "readOnly": false
+    },
+    "LEDConfig": {
+      "title": "LED Configuration",
+      "description": "Configuration to disable LEDs.",
+      "type": "boolean",
+      "readOnly": false
+    },
+    "messageIndicatorLED": {
+      "title": "Message Indicator LED",
+      "description": "LED indication for message sending, network search process, and overload.",
+      "type": "boolean",
+      "readOnly": true
+    }
+  },
+    "features": {
+        "instantaneousCurrent": {
+          "properties": {
+            "title": "Instantaneous Current",
+            "description": "Instantaneous current measurement.",
+            "type": "number",
+            "unit": "om2:ampere",
+            "readOnly": true
+          }
+        },
+        "instantaneousVoltage": {
+          "properties": {
+            "title": "Instantaneous Voltage",
+            "description": "Instantaneous voltage measurement.",
+            "type": "number",
+            "unit": "om2:volt",
+            "readOnly": true
+          }
+        },
+        "frequency": {
+          "properties": {
+            "title": "Frequency",
+            "description": "Frequency of the network.",
+            "type": "number",
+            "unit": "om2:hertz",
+            "readOnly": true
+          }
+        },
+        "activePower": {
+          "properties": {
+            "title": "Active Power",
+            "description": "Active power measurement (positive and negative).",
+            "type": "number",
+            "unit": "om2:watt",
+            "readOnly": true
+          }
+        },
+        "powerFactor": {
+          "properties": {
+            "title": "Power Factor",
+            "description": "Power factor (positive and negative).",
+            "type": "number",
+            "readOnly": true
+          }
+        },
+        "relayState": {
+          "properties": {
+            "title": "Relay State",
+            "description": "State of the relay.",
+            "type": "string",
+            "enum": [ "on", "off" ],
+            "readOnly": true
+          }
+        },
+        "deliveredEnergy": {
+          "properties": {
+            "title": "Delivered Energy",
+            "description": "Energy delivered (consumption).",
+            "type": "number",
+            "unit": "om2:joule",
+            "readOnly": true
+          }
+        },
+        "receivedEnergy": {
+          "properties": {
+            "title": "Received Energy",
+            "description": "Energy received (generation).",
+            "type": "number",
+            "unit": "om2:joule",
+            "readOnly": true
+          }
+        },
+        "maximumMeasuredCurrent": {
+          "properties": {
+            "title": "Maximum Measured Current",
+            "description": "Maximum measured current.",
+            "type": "number",
+            "unit": "om2:ampere",
+            "readOnly": true
+          }
+        }
+      }
+}

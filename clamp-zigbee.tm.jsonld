@@ -1,0 +1,122 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "title": "Clamp - Zigbee HA Sensor",
+  "version": {
+    "model": "1.0.1"
+  },
+  "tm:optional": [],
+  "attributes": {
+    "house": {
+      "idHouseThing": ""
+    },
+    "hub":{
+      "idHubThing": ""
+    },
+    "peakMeasurement": {
+      "title": "Peak Measurement",
+      "description": "Peak measurement recorded by the sensor.",
+      "type": "number",
+      "unit": "om2:unit",
+      "readOnly": true
+    },
+    "firmwareUpdate": {
+      "title": "Firmware Update",
+      "description": "Capability for remote firmware updates.",
+      "type": "boolean",
+      "readOnly": false
+    },
+    "identificationMode": {
+      "title": "Identification Mode",
+      "description": "Sensor identification mode using LED.",
+      "type": "boolean",
+      "readOnly": false
+    },
+    "initialNetworkConnection": {
+      "title": "Initial Network Connection",
+      "description": "Process of initial network connection using a button.",
+      "type": "boolean",
+      "readOnly": false
+    },
+    "messageIndicatorLED": {
+      "title": "Message Indicator LED",
+      "description": "LED indication for message sending and network search process.",
+      "type": "boolean",
+      "readOnly": true
+    }
+  },
+
+    "features": {
+        "instantaneousCurrentTotal": {
+            "properties": {
+                "title": "Instantaneous Current (Total)",
+                "type": "number",
+                "unit": "om2:ampere",
+                "readOnly": true
+            }
+        },
+        "instantaneousCurrentPerPhase": {
+            "properties": {
+                "title": "Instantaneous Current (Per Phase)",
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "unit": "om2:ampere"
+                },
+                "readOnly": true
+            }
+        },
+        "cumulativeCurrentTotal": {
+            "properties": {
+                "title": "Cumulative Current (Total)",
+                "type": "number",
+                "unit": "om2:ampere",
+                "readOnly": true
+            }
+        },
+        "cumulativeCurrentPerPhase": {
+            "properties": {
+                "title": "Cumulative Current (Per Phase)",
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "unit": "om2:ampere"
+                },
+                "readOnly": true
+            }
+        },
+        "batteryLevel": {
+            "properties": {
+                "title": "Battery Level",
+                "description": "Battery level in percentage.",
+                "type": "number",
+                "unit": "om2:percent",
+                "readOnly": true
+            }
+        },
+        "batteryVoltage": {
+            "properties": {
+                "title": "Battery Voltage",
+                "description": "Battery voltage.",
+                "type": "number",
+                "unit": "om2:volt",
+                "readOnly": true
+            }
+        },
+        "maximumMeasuredCurrent": {
+            "properties": {
+                "title": "Maximum Measured Current",
+                "description": "Maximum measured current.",
+                "type": "number",
+                "unit": "om2:ampere",
+                "readOnly": true
+            }
+        }
+    }
+}

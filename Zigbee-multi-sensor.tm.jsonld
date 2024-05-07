@@ -1,0 +1,243 @@
+{
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+        "time": "http://www.w3.org/2006/time#"
+      }
+    ],
+    "@type": "tm:ThingModel",
+    "title": "ZigBee Multi-Sensor",
+    "version": {
+      "model": "1.0.0"
+    },
+    "tm:optional": [],
+    "attributes":{
+        "house": {
+            "idHouseThing": ""
+          },
+          "hub":{
+            "idHubThing": ""
+          },
+        "detectionRange": {
+            "title": "Detection Range",
+            "description": "Detection range of the sensor.",
+            "type": "number",
+            "unit": "om2:meter",
+            "value": 5
+        },
+        "detectionAngle":{
+            "title": "Detection Angle",
+            "description": "Detection angle of the sensor.",
+            "type": "object",
+            "properties": {
+                "vertical":{
+                    "title": "Vertical",
+                    "description": "Vertical detection angle.",
+                    "type": "number",
+                    "unit": "om2:degree",
+                    "value": 100
+                },
+                "horizontal":{
+                    "title": "Horizontal",
+                    "description": "Horizontal detection angle.",
+                    "type": "number",
+                    "unit": "om2:degree",
+                    "value": 120
+                }
+            }
+        },
+        "temperature":{
+            "title": "Temperature",
+            "description": "Temperature measured by the sensor.",
+            "type": "object",
+            "internalTemperatureRange":{
+                "title": "Temperature Range",
+                "description": "Temperature range of the internal sensor.",
+                "type": "object",
+                "properties": {
+                    "min": {
+                        "title": "Minimum",
+                        "description": "Minimum temperature.",
+                        "type": "number",
+                        "unit": "om2:degreeCelsius",
+                        "value": -10,
+                        "readOnly": true
+                    },
+                    "max": {
+                        "title": "Maximum",
+                        "description": "Maximum temperature.",
+                        "type": "number",
+                        "unit": "om2:degreeCelsius",
+                        "value": 85,
+                        "readOnly": true
+                    },
+                    "accuracy":{
+                        "title": "Accuracy",
+                        "description": "Accuracy of the temperature measurement.",
+                        "type": "number",
+                        "unit": "om2:degreeCelsius",
+                        "value": 0.5,
+                        "readOnly": true
+                    }
+                }
+            },
+            "remoteProbeTemperatureRange":{
+                "title": "Temperature Range",
+                "description": "Temperature range of the remote probe.",
+                "type": "object",
+                "properties": {
+                    "min": {
+                        "title": "Minimum",
+                        "description": "Minimum temperature.",
+                        "type": "number",
+                        "unit": "om2:degreeCelsius",
+                        "value": -20,
+                        "readOnly": true
+                    },
+                    "max": {
+                        "title": "Maximum",
+                        "description": "Maximum temperature.",
+                        "type": "number",
+                        "unit": "om2:degreeCelsius",
+                        "value": 100,
+                        "readOnly": true
+                    },
+                    "accuracy":{
+                        "title": "Accuracy",
+                        "description": "Accuracy of the temperature measurement.",
+                        "type": "number",
+                        "unit": "om2:degreeCelsius",
+                        "value": 1,
+                        "readOnly": true
+                    }
+                }
+            }
+        },
+        "humidity":{
+            "title": "Humidity",
+            "description": "Humidity measured by the sensor.",
+            "type": "object",
+            "reportingCycle":{
+                "title": "Reporting Cycle",
+                "description": "Reporting cycle of the humidity sensor.",
+                "type": "object",
+                "properties": {
+                    "min": {
+                        "title": "Minimum",
+                        "description": "Minimum reporting cycle.",
+                        "type": "number",
+                        "unit": "om2:second",
+                        "value": 60,
+                        "readOnly": true
+                    },
+                    "max": {
+                        "title": "Maximum",
+                        "description": "Maximum reporting cycle.",
+                        "type": "number",
+                        "unit": "om2:second",
+                        "value": 300,
+                        "readOnly": true
+                    }
+                }
+
+            },
+
+            "properties": {
+                "min": {
+                    "title": "Minimum",
+                    "description": "Minimum humidity.",
+                    "type": "number",
+                    "unit": "om2:percent",
+                    "value": 0,
+                    "readOnly": true
+                },
+                "max": {
+                    "title": "Maximum",
+                    "description": "Maximum humidity.",
+                    "type": "number",
+                    "unit": "om2:percent",
+                    "value": 100,
+                    "readOnly": true
+                },
+                "accuracy":{
+                    "title": "Accuracy",
+                    "description": "Accuracy of the humidity measurement.",
+                    "type": "number",
+                    "unit": "om2:percent",
+                    "value": 3,
+                    "readOnly": true
+                }
+            }
+        },
+        "motion":{
+            "title": "Motion",
+            "description": "Motion detected by the sensor.",
+            "type": "object",
+            "properties": {
+                "reportingCycle":{
+                    "title": "Reporting Cycle",
+                    "description": "Reporting cycle of the motion sensor.",
+                    "type": "object",
+                    "properties": {
+                        "triggered": {
+                            "title": "Triggered",
+                            "description": "Time before updating values after a motion event.",
+                            "type": "number",
+                            "unit": "om2:second",
+                            "value": 0,
+                            "readOnly": true
+                        },
+                        "notTriggered": {
+                            "title": "Not Triggered",
+                            "description": "Time before updating values",
+                            "type": "number",
+                            "unit": "om2:hour",
+                            "value": 1,
+                            "readOnly": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "features": {
+        "batteryVoltage": {
+            "properties": {
+                "title": "Battery Voltage",
+                "description": "Battery voltage.",
+                "type": "number",
+                "unit": "om2:volt",
+                "readOnly": true
+            }
+        },
+        "motion": {
+            "title": "Motion",
+            "description": "Motion detected by the sensor.",
+            "type": "boolean",
+            "readOnly": true
+        },
+        "vibration": {
+            "title": "Vibration",
+            "description": "Vibration measured by the sensor.",
+            "type": "number",
+            "unit": "om2:milliMeterPerSecondSquared",
+            "readOnly": true
+        },
+        "temperature": {
+            "title": "Temperature",
+            "description": "Temperature measured by the sensor.",
+            "type": "number",
+            "unit": "om2:degreeCelsius",
+            "readOnly": true
+        },
+        "humidity": {
+            "title": "Humidity",
+            "description": "Humidity measured by the sensor.",
+            "type": "number",
+            "unit": "om2:percent",
+            "readOnly": true
+        }
+    }
+  }
+  

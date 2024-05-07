@@ -1,0 +1,143 @@
+{
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+        "time": "http://www.w3.org/2006/time#"
+      }
+    ],
+    "@type": "tm:ThingModel",
+    "title": "Shelly EM Energy Meter",
+    "version": {
+      "model": "1.0.0"
+    },
+    "tm:optional": [],
+    "attributes":{
+      "house": {
+        "idHouseThing": ""
+      },
+      "hub":{
+        "idHubThing": ""
+      },
+        "workingTemperature":{
+            "title": "Working Temperature",
+            "description": "The working temperature of the device.",
+            "type": "object",
+            "properties": {
+              "min": {
+                "title": "Minimum",
+                "description": "The minimum working temperature of the device.",
+                "type": "number",
+                "unit": "om2:degreeCelsius"
+              },
+              "max": {
+                "title": "Maximum",
+                "description": "The maximum working temperature of the device.",
+                "type": "number",
+                "unit": "om2:degreeCelsius"
+              }
+            }
+        },
+        "maxHistory":{
+            "title": "Maximum History",
+            "description": "The maximum number of days that can be stored.",
+            "type": "number",
+            "unit": "om2:day",
+            "value": 365
+        },
+        "operationalRange":{
+            "title": "Operational Range",
+            "description": "The operational range of the device.",
+            "type": "object",
+            "properties": {
+                "outdoors":{
+                    "title": "Outdoors",
+                    "description": "The outdoors operational range of the device.",
+                    "type": "number",
+                    "unit": "om2:meter",
+                    "value": 50
+                },
+                "indoors":{
+                    "title": "Indoors",
+                    "description": "The indoors operational range of the device.",
+                    "type": "number",
+                    "unit": "om2:meter",
+                    "value": 30
+                }
+            }
+        }
+    },
+    "features": {
+      "power": {
+        "title": "Power",
+        "description": "Instantaneous power consumption.",
+        "type": "number",
+        "unit": "om2:watt",
+        "readOnly": true
+      },
+      "current": {
+        "title": "Current",
+        "description": "Electric current flowing through the meter.",
+        "type": "number",
+        "unit": "om2:ampere",
+        "readOnly": true
+      },
+      "energy": {
+        "title": "Energy",
+        "description": "Accumulated energy consumption.",
+        "type": "number",
+        "unit": "om2:wattHour",
+        "readOnly": true
+      },
+      "voltage": {
+        "title": "Voltage",
+        "description": "Electric potential difference across the meter.",
+        "type": "number",
+        "unit": "om2:volt",
+        "readOnly": true
+      },
+      "historicalData": {
+        "title": "Historical Data",
+        "description": "Energy consumption data for the last 365 days.",
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "title": "Start Date",
+            "description": "Date when the historical data collection started.",
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "title": "End Date",
+            "description": "Date when the historical data collection ended.",
+            "type": "string",
+            "format": "date"
+          },
+          "dataPoints": {
+            "title": "Data Points",
+            "description": "Array of energy consumption data points for each day.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "title": "Date",
+                  "description": "Date of the data point.",
+                  "type": "string",
+                  "format": "date"
+                },
+                "energyConsumption": {
+                  "title": "Energy Consumption",
+                  "description": "Energy consumption for the day.",
+                  "type": "number",
+                  "unit": "om2:wattHour"
+                }
+              }
+            }
+          }
+        },
+        "readOnly": true
+      }
+    }
+  }
+  

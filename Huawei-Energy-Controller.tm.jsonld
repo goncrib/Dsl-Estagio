@@ -1,0 +1,110 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "title": "Huawei Smart Energy Controller",
+  "version": {
+    "model": "1.0.0"
+  },
+  "tm:optional": [],
+  "attributes": {
+    "house": {
+      "idHouseThing": ""
+    },
+    "hub":{
+      "idHubThing": ""
+    },
+    "voltageOperatingRange": {
+      "title": "Voltage Operating Range",
+      "description": "Acceptable range of operating voltage.",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "unit": "om2:volt"
+      },
+      "readOnly": true
+    },
+    "maxVoltage": {
+      "title": "Maximum Voltage",
+      "description": "Maximum allowable voltage.",
+      "type": "number",
+      "unit": "om2:volt",
+      "readOnly": true
+    },
+    "maxCurrent": {
+      "title": "Maximum Current",
+      "description": "Maximum allowable current.",
+      "type": "number",
+      "unit": "om2:ampere",
+      "readOnly": true
+    },
+    "maxPower": {
+      "title": "Maximum Power",
+      "description": "Maximum allowable power.",
+      "type": "number",
+      "unit": "om2:watt",
+      "readOnly": true
+    }
+  },
+  "features": {
+    "voltageInput": {
+      "properties": {
+        "title": "Input Voltage",
+        "description": "Voltage from the grid or other input source.",
+        "type": "number",
+        "unit": "om2:volt",
+        "readOnly": true
+      }
+    },
+    "voltageOutput": {
+      "properties": {
+        "title": "Output Voltage",
+        "description": "Voltage output to the grid or battery.",
+        "type": "number",
+        "unit": "om2:volt",
+        "readOnly": true
+      }
+    },
+    "currentInput": {
+      "properties": {
+        "title": "Input Current",
+        "description": "Current from the grid or other input source.",
+        "type": "number",
+        "unit": "om2:ampere",
+        "readOnly": true
+      }
+    },
+    "currentOutput": {
+      "properties": {
+        "title": "Output Current",
+        "description": "Current output to the grid or battery.",
+        "type": "number",
+        "unit": "om2:ampere",
+        "readOnly": true
+      }
+    },
+    "powerInput": {
+      "properties": {
+        "title": "Input Power",
+        "description": "Power from the grid or other input source.",
+        "type": "number",
+        "unit": "om2:watt",
+        "readOnly": true
+      }
+    },
+    "powerOutput": {
+      "properties": {
+        "title": "Output Power",
+        "description": "Power output to the grid or battery.",
+        "type": "number",
+        "unit": "om2:watt",
+        "readOnly": true
+      }
+    }
+  }
+}
