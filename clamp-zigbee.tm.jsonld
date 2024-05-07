@@ -20,10 +20,7 @@
       "readOnly": true
     },
     "hub":{
-      "title": "hub Id",
-      "description": "Id of the hub.",
-      "type": "number",
-      "readOnly": true
+      "HubId": "hub Id"
     },
     "peakMeasurement": {
       "title": "Peak Measurement",
