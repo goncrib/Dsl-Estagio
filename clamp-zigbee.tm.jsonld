@@ -14,10 +14,16 @@
   "tm:optional": [],
   "properties": {
     "house": {
-      "idHouseThing": ""
+      "title": "House Id",
+      "description": "Id of the house.",
+      "type": "number",
+      "readOnly": true
     },
     "hub":{
-      "idHubThing": ""
+      "title": "hub Id",
+      "description": "Id of the hub.",
+      "type": "number",
+      "readOnly": true
     },
     "peakMeasurement": {
       "title": "Peak Measurement",
@@ -49,71 +55,6 @@
       "description": "LED indication for message sending and network search process.",
       "type": "boolean",
       "readOnly": true
-    },
-    "instantaneousCurrentTotal": {
-            "properties": {
-                "title": "Instantaneous Current (Total)",
-                "type": "number",
-                "unit": "om2:ampere",
-                "readOnly": true
-            }
-        },
-        "instantaneousCurrentPerPhase": {
-            "properties": {
-                "title": "Instantaneous Current (Per Phase)",
-                "type": "array",
-                "items": {
-                    "type": "number",
-                    "unit": "om2:ampere"
-                },
-                "readOnly": true
-            }
-        },
-        "cumulativeCurrentTotal": {
-            "properties": {
-                "title": "Cumulative Current (Total)",
-                "type": "number",
-                "unit": "om2:ampere",
-                "readOnly": true
-            }
-        },
-        "cumulativeCurrentPerPhase": {
-            "properties": {
-                "title": "Cumulative Current (Per Phase)",
-                "type": "array",
-                "items": {
-                    "type": "number",
-                    "unit": "om2:ampere"
-                },
-                "readOnly": true
-            }
-        },
-        "batteryLevel": {
-            "properties": {
-                "title": "Battery Level",
-                "description": "Battery level in percentage.",
-                "type": "number",
-                "unit": "om2:percent",
-                "readOnly": true
-            }
-        },
-        "batteryVoltage": {
-            "properties": {
-                "title": "Battery Voltage",
-                "description": "Battery voltage.",
-                "type": "number",
-                "unit": "om2:volt",
-                "readOnly": true
-            }
-        },
-        "maximumMeasuredCurrent": {
-            "properties": {
-                "title": "Maximum Measured Current",
-                "description": "Maximum measured current.",
-                "type": "number",
-                "unit": "om2:ampere",
-                "readOnly": true
-            }
-        }
+    }
   }
 }
