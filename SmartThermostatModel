@@ -1,0 +1,72 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "@type": "tm:ThingModel",
+    "title": "Smart Thermostat",
+    "description": "A smart thermostat for controlling temperature in a smart home.",
+    "tm:optional": [],
+    "properties":
+	{
+		"Temperature":
+        {
+    		"type": "number",
+    		"description": "Current temperature reading"
+        }
+,
+		"Humidity":
+        {
+    		"type": "number",
+    		"description": "Current humidity level"
+        }
+
+},
+	"actions":
+	{
+		"SetTemperature":
+        {
+            "input":
+            {	"TargetTemperature":
+                    {
+                        "type": "number",
+                        "description": "Target temperature to set"
+                    }
+},
+			"output":
+			{
+				"Success":
+                {
+                    "type": "boolean",
+                    "description": "Indicates whether the temperature was successfully set"
+                }
+},
+			"description": "Set the target temperature for the thermostat"
+        }
+},
+	"events":
+	{
+		"TemperatureChanged":
+        {
+            "data":
+            {
+				"NewTemperature":
+                    {
+                        "type": "number",
+                        "description": "New temperature value"
+                    }
+},
+			"description": "Event triggered when the temperature changes"
+        }
+,
+		"HumidityChanged":
+        {
+            "data":
+            {
+				"NewHumidity":
+                    {
+                        "type": "number",
+                        "description": "New humidity value"
+                    }
+},
+			"description": "Event triggered when the humidity changes"
+        }
+    }
+}
