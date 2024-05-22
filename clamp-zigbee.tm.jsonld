@@ -26,7 +26,7 @@
       "title": "Peak Measurement",
       "description": "Peak measurement recorded by the sensor.",
       "type": "number",
-      "unit": "om2:unit",
+      "unit": "om2:unita",
       "readOnly": true
     },
     "firmwareUpdate": {
