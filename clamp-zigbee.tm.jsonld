@@ -3,7 +3,9 @@
     "https://www.w3.org/2022/wot/td/v1.1",
     {
       "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
-      "time": "http://www.w3.org/2006/time#"
+      "time": "http://www.w3.org/2006/time#",
+      "ditto": "https://ditto.eclipseprojects.io/wot/ditto-extension#",
+
     }
   ],
   "@type": "tm:ThingModel",
@@ -27,13 +29,16 @@
       "description": "Peak measurement recorded by the sensor.",
       "type": "number",
       "unit": "oms2:unit",
-      "readOnly": true
+      "readOnly": true,
+      "ditto:category": "features"
     },
     "firmwareUpdate": {
       "title": "Firmware Update",
       "description": "Capability for remote firmware updates.",
       "type": "boolean",
-      "readOnly": false
+      "readOnly": false,
+      "ditto:category": "random"
+
     },
     "identificationMode": {
       "title": "Identification Mode",
