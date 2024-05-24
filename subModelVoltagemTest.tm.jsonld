@@ -1,6 +1,6 @@
-{"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"grupo3":"assas"}],
+{"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"om2":"http://www.ontology-of-units-of-measure.org/resource/om-2/"}],
 "@type":"tm:ThingModel", 
 "title":"Measurement:voltagem",
 "properties":{
-"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"number", "minimum":"4.0", "maximum":"7.0", "unit":"grupo3:Volt"}
+"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"number", "minimum":4.0, "maximum":7.0, "unit":"om2:volt"}
 }}
