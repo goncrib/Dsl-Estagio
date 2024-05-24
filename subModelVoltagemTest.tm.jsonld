@@ -1,6 +1,6 @@
 {"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"grupo3":"assas"}],
 "@type":"tm:ThingModel", 
 "title":"Measurement:voltagem",
-properties:{
+"properties":{
 "voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"float", "minimum":"4.0", "maximum":"7.0", "unit":"grupo3:Volt"}
 }}
