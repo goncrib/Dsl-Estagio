@@ -16,6 +16,8 @@
 		"Humidity":
         {
     		"type": "number",
+		"minimum":5,
+		"maximum":10
     		"description": "Current humidity level"
         }
 
