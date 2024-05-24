@@ -2,5 +2,5 @@
 "@type":"tm:ThingModel", 
 "title":"Measurement:voltagem",
 properties:{
-"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"float", "minimum":"4.0", "maximum":"4.0", "unit":"grupo3:Volt"}
+"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"float", "minimum":"4.0", "maximum":"7.0", "unit":"grupo3:Volt"}
 }}
