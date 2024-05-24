@@ -1,6 +1,6 @@
-"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"grupo3":"assas"}],
+"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"om2":"http://www.ontology-of-units-of-measure.org/resource/om-2/"}],
 "type":"@tm:ThingModel", 
-"title":"corrente",
+"title":"Measurement:Voltagem",
 "properties"{
-"corrente": {"title":"corrente", "type":"string", "unit":"grupo3:Ampere"}
+"corrente": {"title":"Voltagem", "type":"string", "unit":"om2:volt"}
 }
