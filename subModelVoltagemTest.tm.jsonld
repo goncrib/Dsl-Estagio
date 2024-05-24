@@ -1,0 +1,6 @@
+"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"grupo3":"assas"}],
+"type":"@tm:ThingModel", 
+"title":"corrente",
+properties{
+"corrente": {"title":"corrente", "type":"string", "unit":"grupo3:Ampere"}
+}
