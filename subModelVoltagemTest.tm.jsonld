@@ -2,5 +2,5 @@
 "@type":"tm:ThingModel", 
 "title":"Measurement:voltagem",
 "properties":{
-"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"number", "minimum":4.0, "maximum":7.0, "unit":"om2:volt"}
+"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"number", "maximum":7.0, "unit":"om2:volt"}
 }}
