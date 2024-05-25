@@ -1,0 +1,14 @@
+{"@context": ["https://www.w3.org/2022/wot/td/v1.1"],
+"@type":"tm:ThingModel", 
+"version":{"model":"0.0.1"}, 
+"title":"Measurement:Clamp", 
+"description":"Clamp",
+"properties":{
+"prop2"{
+"type":"object", 
+"subProp"{
+"type":"object", 
+"subProp2": {"title":"subProp2", "type":"array", items:{"type":"number"}, "minItems":5}
+}
+}
+}}
