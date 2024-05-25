@@ -4,9 +4,9 @@
 "title":"Measurement:Clamp", 
 "description":"Clamp",
 "properties":{
-"prop2"{
+"prop2":{
 "type":"object", 
-"subProp"{
+"subProp":{
 "type":"object", 
 "subProp2": {"title":"subProp2", "type":"array", "items":{"type":"number"}, "minItems":5}
 }
