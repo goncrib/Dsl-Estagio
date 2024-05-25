@@ -8,7 +8,7 @@
 "type":"object", 
 "subProp"{
 "type":"object", 
-"subProp2": {"title":"subProp2", "type":"array", items:{"type":"number"}, "minItems":5}
+"subProp2": {"title":"subProp2", "type":"array", "items":{"type":"number"}, "minItems":5}
 }
 }
 }}
