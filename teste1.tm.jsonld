@@ -10,5 +10,5 @@
 "Prop4": {"type":"number", "minimum":10.0, "maximum":20.0, "default":10.0},
 "Prop5": {"type":"array", "items": {"type":"number", "minimum":1.0, "maximum":20.0}, "minItems":2, "maxItems":20, "default":[1,2,3,4]},
 "Prop6": {"type":"array", "items": {"type":"string"}, "default":["um","dois","três"]},
-"Prop7": {"type":"array", "items": {"type":"boolean"}, "default":[True,True,False]}
+"Prop7": {"type":"array", "items": {"type":"boolean"}, "default":[true,true,false]}
 }}
