@@ -1,6 +1,14 @@
-{"@context": ["https://www.w3.org/2022/wot/td/v1.1",{"om2":"http://www.ontology-of-units-of-measure.org/resource/om-2/"}],
+{"@context": ["https://www.w3.org/2022/wot/td/v1.1"],
 "@type":"tm:ThingModel", 
-"title":"Measurement:voltagem",
+"version":{"model":"0.0.1"}, 
+"title":"Measurement:Clamp", 
+"description":"Clamp",
 "properties":{
-"voltagem": {"title":"voltagem", "description":"Voltagem do circuito", "type":"number", "maximum":7.0, "unit":"om2:volt"}
+"Prop1":{
+"type":"object", 
+"properties":{
+"subProp2": {"type":"array", "default":[1,2,3]}, 
+"subProp3": {"type":"array", "items":{"type":"string"}, "minItems":5}
+}
+}
 }}
