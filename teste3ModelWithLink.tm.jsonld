@@ -9,8 +9,8 @@
 "href":"https://goncrib.github.io/Dsl-Estagio/teste3subModel.tm.jsonld",
 "type":"application/tm+json",
 "instanceName":"voltagem"}
-}]
-},
+]
+,
 "properties":{
 "Prop1": {"type":"number", "minimum":1.0, "maximum":20.0},
 "Prop2": {"type":"string"},
