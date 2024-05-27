@@ -1,0 +1,22 @@
+{"@context": ["https://www.w3.org/2022/wot/td/v1.1"],
+"@type":"tm:ThingModel", 
+"version":{"model":"0.0.1"}, 
+"title":"Measurement:Clamp", 
+"description":"Clamp",
+"links":[
+{
+"rel":"tm:submodel",
+"href":"https://goncrib.github.io/Dsl-Estagio/teste3subModel.tm.jsonld",
+"type":"application/tm+json",
+"instanceName":"voltagem"}
+}]
+},
+"properties":{
+"Prop1": {"type":"number", "minimum":1.0, "maximum":20.0},
+"Prop2": {"type":"string"},
+"Prop3": {"type":"boolean"},
+"Prop4": {"type":"array", "items": {"type":"number"}},
+"Prop5": {"type":"array", "items": {"type":"number"}, "minItems":2, "maxItems":20},
+"Prop6": {"description":"teste Descrição", "type":"string"},
+"Prop7": {"type":"array", "items": {"type":"boolean"}, "minItems":2, "maxItems":20}
+}}
