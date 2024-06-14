@@ -8,7 +8,6 @@
 	{
 		"Temperature":
         {
-		"default":15,
     		"type": "numaaber",
     		"description": "Current temperature reading"
         }
