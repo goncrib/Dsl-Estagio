@@ -8,7 +8,8 @@
 	{
 		"Temperature":
         {
-    		"type": "nkjn",
+		"default":15
+    		"type": "number",
     		"description": "Current temperature reading",
 		"readOnly":"ok"
         }
