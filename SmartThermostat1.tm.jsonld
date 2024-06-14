@@ -8,8 +8,9 @@
 	{
 		"Temperature":
         {
-    		"type": "numaaber",
-    		"description": "Current temperature reading"
+    		"type": "nkjn",
+    		"description": "Current temperature reading",
+		"readOnly":"ok"
         }
 ,
 		"Humidity":
